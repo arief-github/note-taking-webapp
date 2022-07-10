@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { getInitialData } from '../data/index';
+import { getInitialData } from '../data';
 
 const Context = createContext();
 

@@ -7,7 +7,7 @@ function useNote() {
 	const { setNotes, setSearch } = dispatchEvent;
 
 	// state
-	const [data, setData] = useState([]);
+	const [noteData, setData] = useState([]);
 
 	function addNote(title, body) {
 		const noteData = {
@@ -17,7 +17,7 @@ function useNote() {
 			createdAt: new Date().toISOString(),
 			archived: false,
 		};
-		setNotes([...notes, data]);
+		setNotes([...notes, noteData]);
 	}
 
 	function deleteNote(id) {
@@ -28,6 +28,7 @@ function useNote() {
 	function archivedNote(id) {
 		const archivedNotes = notes.findIndex((note) => note.id === id);
 		notes[archivedNotes].archived = !notes[archivedNotes].archived;
+		setNotes([...notes]);
 	}
 
 	// component did mount. set data notes when notes has in array
