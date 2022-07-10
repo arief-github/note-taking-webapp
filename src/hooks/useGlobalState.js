@@ -18,6 +18,7 @@ export const Provider = ({ children }) => {
     );
 };
 
+// default export
 export default function useGlobalState() {
 	return useContext(Context);
 }
