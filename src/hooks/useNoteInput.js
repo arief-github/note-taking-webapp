@@ -28,3 +28,5 @@ function useNoteInput() {
 
 	return { input, changeInput, submit };
 }
+
+export default useNoteInput;
